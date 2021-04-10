@@ -50,7 +50,7 @@ export default class ApiScreen extends React.Component {
   render() {
     return (
       <SafeAreaView style={styles.container}>
-        <HeaderComponent title="Home" />
+        <HeaderComponent title="API Screen" />
         {
           this.state.loading ? <View style={styles.loader}>
             <ActivityIndicator size="large" color={COLORS.blackDark} />

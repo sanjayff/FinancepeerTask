@@ -1,5 +1,17 @@
 import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import {
+    View,
+    Text,
+    StyleSheet,
+    TextInput,
+    TouchableOpacity,
+    Image,
+    SafeAreaView,
+    ScrollView,
+    Platform,
+    FlatList,
+  } from 'react-native';
 
 
 import { Icon } from 'react-native-elements';
@@ -25,7 +37,7 @@ export class TabScreen extends React.Component {
                     style: {
                         height: SizeConfig.blockHeight * 7,
                         // paddingBottom: SizeConfig.blockHeight * 2,
-                        
+
                     },
                     labelStyle: {
                         fontSize: SizeConfig.blockHeight * 2
@@ -36,7 +48,12 @@ export class TabScreen extends React.Component {
                     component={HomeScreen}
                     options={{
                         tabBarIcon: ({ color, size }) => (
-                            <Icon name="home" type="ionicon" color={color} size={size} />
+                            // <Icon name="home" type="ionicon" color={color} size={size} />
+                            <Image
+                                style={{ tintColor: color }}
+                                source={require('../assets/spaces.png')}
+                                resizeMode= "cover"
+                            />
                         ),
                     }}
                 />
@@ -46,6 +63,11 @@ export class TabScreen extends React.Component {
                     options={{
                         tabBarIcon: ({ color, size }) => (
                             <Icon name="cart" type="ionicon" color={color} size={size} />
+                            // <Image
+                            //     style={{ tintColor: color }}
+                            //     source={require('../assets/newspaper.png')}
+                            //     resizeMode= "cover"
+                            // />
                         ),
                     }}
                 />
@@ -54,7 +76,12 @@ export class TabScreen extends React.Component {
                     component={LocationScreen}
                     options={{
                         tabBarIcon: ({ color, size }) => (
-                            <Icon name="cart" type="ionicon" color={color} size={size} />
+                            // <Icon name="cart" type="ionicon" color={color} size={size} />
+                            <Image
+                                style={{ tintColor: color }}
+                                source={require('../assets/pinIcon.png')}
+                                resizeMode= "cover"
+                            />
                         ),
                     }}
                 />
@@ -63,7 +90,12 @@ export class TabScreen extends React.Component {
                     component={JsonDisplayScreen}
                     options={{
                         tabBarIcon: ({ color, size }) => (
-                            <Icon name="cart" type="ionicon" color={color} size={size} />
+                            // <Icon name="cart" type="ionicon" color={color} size={size} />
+                            <Image
+                                style={{ tintColor: color }}
+                                source={require('../assets/tuneIcon.png')}
+                                resizeMode= "cover"
+                            />
                         ),
                     }}
                 />
@@ -72,7 +104,12 @@ export class TabScreen extends React.Component {
                     component={ApiScreen}
                     options={{
                         tabBarIcon: ({ color, size }) => (
-                            <Icon name="cart" type="ionicon" color={color} size={size} />
+                            // <Icon name="cart" type="ionicon" color={color} size={size} />
+                            <Image
+                                style={{ tintColor: color }}
+                                source={require('../assets/infoIcon.png')}
+                                resizeMode= "cover"
+                            />
                         ),
                     }}
                 />
